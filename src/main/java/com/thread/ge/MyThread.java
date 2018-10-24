@@ -1,22 +1,26 @@
 package com.thread.ge;
 
 /**
- * 启动线程的顺序是有序的，但是执行的顺序并非是有序的
  * @author tangquanbin
- * @date 2018/9/21 15:19
+ * @date 2018/09/29 22:30
  */
-public class MyThread {
+public class MyThread extends Thread{
 
-    public static void main(String[] args){
-        System.out.println(Thread.currentThread().getName());
-        for(int i=0; i<10; i++){
-            new Thread("" + i){
-                @Override
-                public void run(){
-                    System.out.println("Thread: " + getName() + " running");
-                }
-            }.start();
-        }
+    @Override
+    public void run() {
+        super.run();
+        System.out.println("MyThread is Alive:"+this.isAlive());
     }
 
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        MyThread myThread = new MyThread();
+        System.out.println("myThread is Alive:"+myThread.isAlive());
+        myThread.start();
+        System.out.println("mythread name:"+myThread.getName()+"mythread id:"+myThread.getId());
+        System.out.println("myThread is Alive:"+myThread.isAlive());
+    }
 }
