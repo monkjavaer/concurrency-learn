@@ -5,6 +5,16 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
+ *用下面的命令查看线程状态
+ *F:\learnsp\GET-Thread->jps
+ * 11120 RemoteMavenServer
+ * 7520 Jps
+ * 9012
+ * 9732 ThreadState
+ * 6684 Launcher
+ *
+ * F:\learnsp\GET-Thread->jstack 9732
+ *
  * @author tangquanbin
  * @date 2018/10/24 19:10
  */
@@ -73,8 +83,10 @@ public class ThreadState {
         }
     }
 
+    /**
+     *
+     */
     static class Sync implements Runnable {
-
         @Override
         public void run() {
             lock.lock();
@@ -85,8 +97,6 @@ public class ThreadState {
             } finally {
                 lock.unlock();
             }
-
         }
-
     }
 }
