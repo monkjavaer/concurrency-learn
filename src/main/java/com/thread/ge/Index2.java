@@ -9,6 +9,10 @@ package com.thread.ge;
 public class Index2 {
     private int count = 0;
 
+    /**
+     * synchronized保证原子性
+     * @param adder
+     */
     public synchronized void add(int adder) {
         this.count = this.count + adder;
         System.out.println("count = "+this.count);

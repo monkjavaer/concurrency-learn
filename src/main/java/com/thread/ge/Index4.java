@@ -1,27 +1,30 @@
 package com.thread.ge;
 
-/**
- * 竞态条件:当多个线程竞争同一资源时，如果对资源的访问顺序敏感，就称存在竞态条件。
- * 解决办法：同步 synchronized
- * @author tangquanbin
- * @date 2018/9/21 16:44
- */
-public class Index3 {
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * @author tangquanbin
+ * @date 2018/10/24 14:42
+ */
+public class Index4 {
+    private  int count = 0;
     /**
-     * volatile 只能保证可见性，无法保证原子性
+     * Lock保证原子性
      */
-    private volatile int count = 0;
+    Lock lock = new ReentrantLock();
 
     public  void add(int adder) {
+        lock.lock();
         this.count = this.count + adder;
         System.out.println("count = "+this.count);
+        lock.unlock();
     }
 
 
     public static void main(String[] args) {
 
-        Index3 index = new Index3();
+        Index4 index = new Index4();
 
         for(int i=0; i<10; i++){
             new Thread("" + i){
@@ -32,5 +35,4 @@ public class Index3 {
             }.start();
         }
     }
-
 }

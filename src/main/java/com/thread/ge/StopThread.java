@@ -14,26 +14,21 @@ public class StopThread extends Thread{
     public void run() {
         /**
          * 在沉睡中停止：如果线程在睡眠中被interrupt，将java.lang.InterruptedException: sleep interrupted
-         */
-/*        try {
-            Thread.sleep(20000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
-
-        /**
          * 使用“异常法”停止线程
          */
         try {
             for (int i=0;i<500000;i++){
                if (this.isInterrupted()) {
-                   System.out.println("停止状态");
-                   throw new InterruptedException();
+                   System.out.println("线程是停止状态。。。");
+                   Thread.yield();
+//                   break;
+//                   throw new InterruptedException();
                }
                System.out.println("i=" + (i + 1));
+
            }
             System.out.println("===for end===");
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
