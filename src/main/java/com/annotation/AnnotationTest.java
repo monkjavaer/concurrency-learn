@@ -12,5 +12,8 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface AnnotationTest {
-    
+
+    String value();
+
+    String message() default  "this is message";
 }
