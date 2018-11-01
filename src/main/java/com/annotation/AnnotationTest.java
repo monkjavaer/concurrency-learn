@@ -13,6 +13,8 @@ import java.lang.annotation.*;
 @Documented
 public @interface AnnotationTest {
 
+    int id();
+
     String value();
 
     String message() default  "this is message";
