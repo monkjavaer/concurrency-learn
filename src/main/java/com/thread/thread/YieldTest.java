@@ -1,4 +1,4 @@
-package com.thread.ge;
+package com.thread.thread;
 
 /**
  * Thread.yield(),放弃当前CPU资源。如果一个线程不是那么重要，或者优先级非常低，而且又害怕它会占用太多的CPU资源，

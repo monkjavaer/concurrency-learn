@@ -1,4 +1,4 @@
-package com.thread.ge.priority;
+package com.thread.priority;
 
 /**
  * @author tangquanbin
