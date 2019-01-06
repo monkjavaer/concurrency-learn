@@ -12,7 +12,7 @@ import java.util.Random;
 public class CollectionsUtil {
 
     public static void main(String[] args) {
-        testContainsAll();
+        testShuffle();
     }
 
     public static void testAddAll() {
