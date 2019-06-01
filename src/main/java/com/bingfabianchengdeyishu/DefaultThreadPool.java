@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/25 14:36
  */
 public class DefaultThreadPool<Job extends Runnable> implements ThreadPool<Job> {

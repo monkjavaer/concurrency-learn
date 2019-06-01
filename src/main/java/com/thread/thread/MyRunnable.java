@@ -1,7 +1,7 @@
 package com.thread.thread;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/9/21 15:10
  */
 public class MyRunnable implements Runnable {

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/24 15:25
  */
 public class Counter {

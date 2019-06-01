@@ -1,7 +1,7 @@
 package com.thread.lock.fair;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/20 21:56
  */
 public class FairLockTest {

@@ -3,7 +3,7 @@ package com.thread.synchronizedmodel.syn1;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/11/26 21:12
  */
 public class Service1 {

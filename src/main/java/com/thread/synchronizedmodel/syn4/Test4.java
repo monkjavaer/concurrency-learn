@@ -2,7 +2,7 @@ package com.thread.synchronizedmodel.syn4;
 
 /**
  * 锁不同的对象，异步的
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/11/28 22:00
  */
 public class Test4 {

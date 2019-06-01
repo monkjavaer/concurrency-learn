@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  * 个结构被附带在线程上，也就是说一个线程可以根据一个ThreadLocal对象查询到绑定在这个
  * 线程上的一个值。
  *
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/25 10:57
  */
 public class Profiler {

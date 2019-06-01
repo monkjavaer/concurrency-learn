@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 使用AtomicInteger原子类代替i++使用synchronized的线程安全操作
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/05 22:07
  */
 public class AtomicIntegerTest {

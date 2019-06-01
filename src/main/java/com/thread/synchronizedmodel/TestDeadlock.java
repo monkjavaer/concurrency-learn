@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 死锁实例
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/11/26 22:37
  */
 public class TestDeadlock {

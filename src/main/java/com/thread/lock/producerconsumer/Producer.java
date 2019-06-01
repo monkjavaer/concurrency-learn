@@ -9,7 +9,7 @@ import java.util.concurrent.locks.Lock;
 /**
  * 生产者
  *
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/18 22:10
  */
 public class Producer implements Runnable {

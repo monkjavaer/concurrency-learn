@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 安全的终止线程两种方式
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/25 9:30
  */
 public class Shutdown {

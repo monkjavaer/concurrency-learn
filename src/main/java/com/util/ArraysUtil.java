@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/21 22:30
  */
 public class ArraysUtil {

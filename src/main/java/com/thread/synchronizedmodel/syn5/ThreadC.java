@@ -1,7 +1,7 @@
 package com.thread.synchronizedmodel.syn5;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/11/28 21:58
  */
 public class ThreadC extends Thread {

@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  * 随着main方法执行完毕而终止，而此时Java虚拟
  * 机中已经没有非Daemon线程，虚拟机需要退出。
  *
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/25 11:15
  */
 public class Daemon {

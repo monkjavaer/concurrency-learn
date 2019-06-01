@@ -1,7 +1,7 @@
 package com.thread.thread;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/08 21:09
  */
 public class StopThread extends Thread{

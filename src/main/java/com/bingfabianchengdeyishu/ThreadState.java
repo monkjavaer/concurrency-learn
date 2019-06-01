@@ -15,7 +15,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * F:\learnsp\GET-Thread->jstack 9732
  *
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/24 19:10
  */
 public class ThreadState {

@@ -3,7 +3,7 @@ package com.thread.lock.count;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/20 22:12
  */
 public class CountService {

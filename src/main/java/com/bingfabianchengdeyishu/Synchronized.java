@@ -8,7 +8,7 @@ package com.bingfabianchengdeyishu;
  * 时，执行方法的线程必须先获取到该对象的监视器才能进入同步块或者同步方法，而没有获
  * 取到监视器（执行该方法）的线程将会被阻塞在同步块和同步方法的入口处，进入BLOCKED
  * 状态。
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/25 9:53
  */
 public class Synchronized {

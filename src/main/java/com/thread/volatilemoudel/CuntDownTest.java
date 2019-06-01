@@ -9,7 +9,7 @@ import java.util.concurrent.Semaphore;
  * @Title: CuntDownTest
  * @Package: com.thread.volatilemoudel
  * @Description: TODO（添加描述）
- * @Author: tangquanbin
+ * @Author: monkjavaer
  * @Data: 2019/4/9 19:54
  * @Version: V1.0
  */

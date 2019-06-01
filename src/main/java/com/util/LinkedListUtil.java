@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2019/01/06 11:35
  */
 public class LinkedListUtil {

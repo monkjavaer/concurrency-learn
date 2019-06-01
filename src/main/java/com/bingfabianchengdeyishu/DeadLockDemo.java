@@ -2,7 +2,7 @@ package com.bingfabianchengdeyishu;
 
 /**
  * 死锁例子
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/24 11:37
  */
 public class DeadLockDemo {

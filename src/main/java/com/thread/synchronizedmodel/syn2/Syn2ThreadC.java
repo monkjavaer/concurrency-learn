@@ -1,7 +1,7 @@
 package com.thread.synchronizedmodel.syn2;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/11/26 21:16
  */
 public class Syn2ThreadC extends Thread{

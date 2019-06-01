@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/24 14:42
  */
 public class Index4 {

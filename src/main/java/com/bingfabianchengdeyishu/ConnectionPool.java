@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * 模拟从连接池中获取、使用和释放连接的过程，而客户端获取连接的过程被设定为等待超时的模式，也就是在
  * 1000毫秒内如果无法获取到可用连接，将会返回给客户端一个null
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/25 13:15
  */
 public class ConnectionPool {

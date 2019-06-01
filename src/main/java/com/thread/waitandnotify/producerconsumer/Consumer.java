@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 消费者
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/15 11:13
  */
 public class Consumer implements Runnable{

@@ -3,7 +3,7 @@ package com.thread.thread;
 /**
  * 竞态条件:当多个线程竞争同一资源时，如果对资源的访问顺序敏感，就称存在竞态条件。
  * 解决办法：同步 synchronized
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/9/21 16:44
  */
 public class Index2 {

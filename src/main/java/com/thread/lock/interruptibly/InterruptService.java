@@ -3,7 +3,7 @@ package com.thread.lock.interruptibly;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/20 22:30
  */
 public class InterruptService {

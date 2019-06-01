@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * 迭代器统一了对容器的访问方式，Iterator单向移动
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2019/01/06 10:56
  */
 public class IteratorUtil {

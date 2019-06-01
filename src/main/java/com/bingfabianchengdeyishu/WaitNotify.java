@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  * 方法则是将等待队列中所有的线程全部移到同步队列，被移动的线程状态由WAITING变为BLOCKED。
  * 5.从wait()方法返回的前提是获得了调用对象的锁。从上述细节中可以看到，等待/通知机制依托于同步机制，
  * 其目的就是确保等待线程从wait()方法返回时能够感知到通知线程对变量做出的修改。
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/25 10:13
  */
 public class WaitNotify {

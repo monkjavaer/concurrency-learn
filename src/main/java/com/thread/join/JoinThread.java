@@ -3,7 +3,7 @@ package com.thread.join;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/15 16:36
  */
 public class JoinThread implements Runnable{

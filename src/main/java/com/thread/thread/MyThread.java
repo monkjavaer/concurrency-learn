@@ -1,7 +1,7 @@
 package com.thread.thread;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/09/29 22:30
  */
 public class MyThread extends Thread{

@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * 公平性锁保证了锁的获取按照FIFO原则，而代价是进行大量的线程切换。非公平性锁虽
  * 然可能造成线程“饥饿”，但极少的线程切换，保证了其更大的吞吐量。
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/25 15:57
  */
 public class FairAndUnfairTest {

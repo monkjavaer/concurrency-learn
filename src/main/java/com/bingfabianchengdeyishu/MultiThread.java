@@ -5,7 +5,7 @@ import java.lang.management.ThreadInfo;
 import java.lang.management.ThreadMXBean;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/24 18:46
  */
 public class MultiThread {

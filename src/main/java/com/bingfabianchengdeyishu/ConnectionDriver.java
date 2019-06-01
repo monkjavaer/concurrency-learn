@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 动态代理构造Connection
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/25 13:16
  */
 public class ConnectionDriver {

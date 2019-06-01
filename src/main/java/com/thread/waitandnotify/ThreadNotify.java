@@ -3,7 +3,7 @@ package com.thread.waitandnotify;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/13 22:04
  */
 public class ThreadNotify extends Thread {

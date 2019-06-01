@@ -6,7 +6,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/18 22:16
  */
 public class Consumer implements Runnable{

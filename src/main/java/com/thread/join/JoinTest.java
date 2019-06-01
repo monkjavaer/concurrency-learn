@@ -1,7 +1,7 @@
 package com.thread.join;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/15 16:38
  */
 public class JoinTest {

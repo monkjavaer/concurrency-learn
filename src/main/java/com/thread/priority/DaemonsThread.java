@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 守护线程测试类
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/11/22 22:54
  */
 public class DaemonsThread implements Runnable {

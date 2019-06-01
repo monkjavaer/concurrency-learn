@@ -3,7 +3,7 @@ package com.bingfabianchengdeyishu;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/24 22:50
  */
 public class Interrupted {

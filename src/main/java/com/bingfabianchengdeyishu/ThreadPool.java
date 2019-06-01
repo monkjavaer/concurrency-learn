@@ -1,7 +1,7 @@
 package com.bingfabianchengdeyishu;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/25 14:35
  */
 public interface ThreadPool<Job extends Runnable> {

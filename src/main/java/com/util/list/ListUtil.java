@@ -3,7 +3,7 @@ package com.util.list;
 import java.util.*;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2019/01/10 21:53
  */
 public class ListUtil {

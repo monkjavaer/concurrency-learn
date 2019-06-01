@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/19 22:35
  */
 public class FairLockService {

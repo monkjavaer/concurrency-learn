@@ -6,7 +6,7 @@ import java.util.ListIterator;
 
 /**
  * list的 ListIterator双向移动
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2019/01/06 11:15
  */
 public class ListIteratorUtil {

@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 生产者
  *
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/15 11:13
  */
 public class Producer implements Runnable {

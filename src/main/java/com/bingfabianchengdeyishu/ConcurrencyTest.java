@@ -4,7 +4,7 @@ package com.bingfabianchengdeyishu;
  * 并发和单线程执行测试
  * 创建线程和上下文切换有开销
  * count大于100w甚至更大时，并发会有效果
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/24 11:25
  */
 public class ConcurrencyTest {

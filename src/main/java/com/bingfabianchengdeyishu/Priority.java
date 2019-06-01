@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 线程优先级不能作为程序正确性的依赖，因为操作系统可以完全不用理会Java
  * 线程对于优先级的设定。
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/24 18:53
  */
 public class Priority {

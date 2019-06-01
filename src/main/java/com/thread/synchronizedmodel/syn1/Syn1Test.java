@@ -2,7 +2,7 @@ package com.thread.synchronizedmodel.syn1;
 
 /**
  * Syn1ThreadA线程先持有Service1对象的锁，Syn1ThreadB对象调用synchronized方法需要等待
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/11/26 21:19
  */
 public class Syn1Test {

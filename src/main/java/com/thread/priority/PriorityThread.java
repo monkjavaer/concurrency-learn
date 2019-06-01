@@ -1,7 +1,7 @@
 package com.thread.priority;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/11/22 21:48
  */
 public class PriorityThread {

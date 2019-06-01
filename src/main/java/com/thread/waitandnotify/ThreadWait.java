@@ -1,7 +1,7 @@
 package com.thread.waitandnotify;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/13 22:00
  */
 public class ThreadWait extends Thread {

@@ -2,7 +2,7 @@ package com.thread.thread;
 
 /**
  *
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/24 14:57
  */
 public class Index5 extends Thread{

@@ -3,7 +3,7 @@ package com.util;
 import java.util.*;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2019/01/07 21:13
  */
 public class SetUtil {

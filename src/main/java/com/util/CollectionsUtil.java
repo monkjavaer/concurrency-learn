@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/21 22:55
  */
 public class CollectionsUtil {

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/15 12:17
  */
 public class ProducerConsumerTest {

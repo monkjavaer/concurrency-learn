@@ -5,7 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/25 15:15
  */
 public class SimpleHttpServer {

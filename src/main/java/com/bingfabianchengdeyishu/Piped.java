@@ -10,7 +10,7 @@ import java.io.PipedWriter;
  * 管道输入/输出流主要包括了如下4种具体实现：PipedOutputStream、PipedInputStream、
  * PipedReader和PipedWriter，前两种面向字节，而后两种面向字符。
  *
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/10/25 10:35
  */
 public class Piped {

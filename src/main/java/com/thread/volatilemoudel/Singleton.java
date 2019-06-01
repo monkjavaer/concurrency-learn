@@ -1,7 +1,7 @@
 package com.thread.volatilemoudel;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/04 22:37
  */
 public class Singleton {

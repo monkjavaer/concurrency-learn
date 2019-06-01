@@ -3,7 +3,7 @@ package com.thread.volatilemoudel;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author tangquanbin
+ * @author monkjavaer
  * @date 2018/12/04 22:07
  */
 public class VolatileTest {
