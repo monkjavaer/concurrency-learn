@@ -20,6 +20,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <netty.version>4.1.2.Final</netty.version>
+        <!-- logback -->
+        <slf4j-api.version>1.7.24</slf4j-api.version>
+        <logback-core.version>1.2.1</logback-core.version>
+        <logback-classic.version>1.2.1</logback-classic.version>
+        <logback-ext-spring.version>0.1.4</logback-ext-spring.version>
+        <!-- commons -->
+        <commons-lang3.version>3.7</commons-lang3.version>
     </properties>
 
     <dependencyManagement>
@@ -28,6 +35,28 @@
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <version>${netty.version}</version>
+            </dependency>
+            <!-- logback start-->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback-classic.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
