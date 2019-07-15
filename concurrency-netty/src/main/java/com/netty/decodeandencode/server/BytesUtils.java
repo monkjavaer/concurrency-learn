@@ -1,4 +1,4 @@
-package com.base.server;
+package com.netty.decodeandencode.server;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;

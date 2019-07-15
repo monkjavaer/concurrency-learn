@@ -1,4 +1,4 @@
-package com.base.client;
+package com.netty.decodeandencode.client;
 
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;

@@ -1,4 +1,4 @@
-package com.base.server;
+package com.netty.decodeandencode.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.PooledByteBufAllocator;

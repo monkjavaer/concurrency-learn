@@ -27,6 +27,7 @@ public class DiscardServer {
     }
 
     public void run() throws Exception {
+        //配置两个服务端的NIO线程组，一个用于接收客服端的链接，另一个用于进行SocketChannel的网络读写。
         //NioEventLoopGroup是一个处理I/O操作的多线程事件循环
         //"boss"：接收一个传入连接
         EventLoopGroup bossGroup = new NioEventLoopGroup();

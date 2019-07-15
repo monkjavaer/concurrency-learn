@@ -1,7 +1,7 @@
-package com.base.client;
+package com.netty.decodeandencode.client;
 
-import com.base.server.CreateUnvXml;
-import com.base.server.UnvProtocol;
+import com.netty.decodeandencode.server.CreateUnvXml;
+import com.netty.decodeandencode.server.UnvProtocol;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
