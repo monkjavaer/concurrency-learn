@@ -25,7 +25,7 @@ public class ConnectionListener implements ChannelFutureListener {
                         e.printStackTrace();
                     }
                 }
-            }, 3, TimeUnit.SECONDS);
+            }, 5, TimeUnit.SECONDS);
         } else {
             System.err.println("服务端链接成功...");
         }

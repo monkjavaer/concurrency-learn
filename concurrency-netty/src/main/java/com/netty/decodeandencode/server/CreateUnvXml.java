@@ -49,7 +49,7 @@ public class CreateUnvXml {
                 "<VehicleColor>Z</VehicleColor>" +
                 "<VehicleType>0</VehicleType>" +
                 "<DriveStatus>0</DriveStatus>" +
-                "<TollgateID>100000588</TollgateID>" +
+                "<TollgateID>10001</TollgateID>" +
                 "<PassTime>"+passTime+"</PassTime>" +
                 "<RecordID>3390286093</RecordID>" +
                 "<DBRecordID>0</DBRecordID>" +

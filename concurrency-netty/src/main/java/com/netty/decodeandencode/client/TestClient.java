@@ -12,8 +12,8 @@ import io.netty.channel.socket.nio.NioSocketChannel;
  */
 public class TestClient {
 
-    public final static int PORT = 5197;
-    public final static String IP = "127.0.0.1";
+    public final static int PORT = 5196;
+    public final static String IP = "10.11.14.3";
 
     public static void connect(){
         EventLoopGroup group = new NioEventLoopGroup();
@@ -43,7 +43,7 @@ public class TestClient {
         } finally {
             try {
                 //需要大于重连时间间隔3秒
-                Thread.sleep(3500);
+                Thread.sleep(5500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

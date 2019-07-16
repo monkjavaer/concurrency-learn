@@ -36,7 +36,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
                     e.printStackTrace();
                 }
             }
-        }, 3, TimeUnit.SECONDS);
+        }, 5, TimeUnit.SECONDS);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
                         while (true){
                             writeAndFlushData(ctx);
                             try {
-                                Thread.sleep(3000);
+                                Thread.sleep(5000);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
