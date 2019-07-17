@@ -4,16 +4,15 @@ import java.io.*;
 import java.net.Socket;
 
 /**
+ * BIO事件处理方法
  * @author monkjavaer
  * @date 2019/7/17 14:00
  */
 public class BioServerHandler implements Runnable {
     private Socket socket;
-
     public BioServerHandler(Socket socket) {
         this.socket = socket;
     }
-
     @Override
     public void run() {
         PrintWriter printWriter = null;

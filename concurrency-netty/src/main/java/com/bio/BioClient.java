@@ -4,13 +4,13 @@ import java.io.*;
 import java.net.Socket;
 
 /**
+ * 服务端
  * @author monkjavaer
  * @date 2019/7/17 15:06
  */
 public class BioClient {
     public static final int PORT = 8888;
     public static final String IP = "127.0.0.1";
-
     public static void main(String[] args) {
         Socket socket = null;
         PrintWriter printWriter = null;

@@ -6,6 +6,7 @@ import java.net.Socket;
 import java.util.concurrent.*;
 
 /**
+ * BIO服务器
  * @author monkjavaer
  * @date 2019/7/17 13:55
  */
@@ -28,7 +29,6 @@ public class BioServer {
             ExecutorService singleThreadPool = new ThreadPoolExecutor(1, 1,
                     0L, TimeUnit.MILLISECONDS,
                     new LinkedBlockingQueue<Runnable>(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
-
             //主线程死循环等待新连接到来
             while(!Thread.currentThread().isInterrupted()){
                 socket = serverSocket.accept();
