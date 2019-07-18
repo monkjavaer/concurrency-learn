@@ -1,0 +1,61 @@
+package com.netty.second;
+
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.util.CharsetUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.nio.charset.StandardCharsets;
+
+/**
+ * @author monkjavaer
+ * @date 2019/7/18 17:26
+ */
+public class NettyClientHandler extends ChannelInboundHandlerAdapter {
+    private static Logger LOGGER = LoggerFactory.getLogger(NettyServerHandler.class);
+
+    /**
+     * 新的连接被建立时调用
+     *
+     * @param ctx
+     * @throws Exception
+     */
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        LOGGER.info("server {} connected.", ctx.channel().remoteAddress());
+        ctx.writeAndFlush(Unpooled.copiedBuffer("hello server!", CharsetUtil.UTF_8));
+        ByteBuf byteBuf = null;
+        byte[] message = "client test".getBytes();
+        for(int i = 0;i<100;i++){
+            byteBuf = Unpooled.buffer(message.length);
+            byteBuf.writeBytes(message);
+            ctx.writeAndFlush(byteBuf);
+        }
+    }
+
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        ByteBuf byteBuf = (ByteBuf) msg;
+        //获取缓冲区可读字节数
+        int readableBytes = byteBuf.readableBytes();
+        byte[] bytes = new byte[readableBytes];
+        byteBuf.readBytes(bytes);
+        LOGGER.info("readableBytes is{},client received message:{}", readableBytes, new String(bytes, StandardCharsets.UTF_8));
+    }
+
+    @Override
+    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+        ctx.flush();
+//        ctx.writeAndFlush(Unpooled.EMPTY_BUFFER)
+//                .addListener(ChannelFutureListener.CLOSE);
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        LOGGER.error("server exceptionCaught,{}",cause.getMessage());
+        ctx.close();
+    }
+}
