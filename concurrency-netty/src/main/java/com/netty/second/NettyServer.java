@@ -41,7 +41,7 @@ public class NettyServer {
                             //通过ChannelPipeline添加处理类ChannelHandler
                             //通常有很多处理类，可以将这个内部类new ChannelInitializer提为一个独立的类
                             ChannelPipeline pipeline = ch.pipeline();
-                            //LineBasedFrameDecoder遍历ByteBuf中的可读字节
+                            //LineBasedFrameDecoder遍历ByteBuf中的可读字节，按行（\n \r\n）处理
                             pipeline.addLast(new LineBasedFrameDecoder(1024));
                             //StringDecoder将接受的码流转换为字符串
                             pipeline.addLast(new StringDecoder());
