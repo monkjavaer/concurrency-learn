@@ -1,4 +1,4 @@
-package com.netty.discard;
+package com.netty.demo.discard;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

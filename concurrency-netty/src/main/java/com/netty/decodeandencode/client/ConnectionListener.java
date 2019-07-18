@@ -14,6 +14,10 @@ public class ConnectionListener implements ChannelFutureListener {
     @Override
     public void operationComplete(ChannelFuture future) throws Exception {
         if (!future.isSuccess()) {
+            //获取错误信息
+            Throwable cause = future.cause();
+            cause.printStackTrace();
+
             final EventLoop loop = future.channel().eventLoop();
             loop.schedule(new Runnable() {
                 @Override
@@ -27,7 +31,7 @@ public class ConnectionListener implements ChannelFutureListener {
                 }
             }, 5, TimeUnit.SECONDS);
         } else {
-            System.err.println("服务端链接成功...");
+            System.err.println("服务端链接成功，do something...");
         }
     }
 }

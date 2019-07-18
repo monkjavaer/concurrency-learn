@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.netty.discard;
+package com.netty.demo.discard;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFuture;

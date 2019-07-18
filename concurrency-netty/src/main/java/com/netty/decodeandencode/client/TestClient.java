@@ -13,7 +13,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 public class TestClient {
 
     public final static int PORT = 5196;
-    public final static String IP = "10.11.14.3";
+    public final static String IP = "10.11.14.31";
 
     public static void connect(){
         EventLoopGroup group = new NioEventLoopGroup();
@@ -31,8 +31,10 @@ public class TestClient {
                             p.addLast(new ClientHandler());
                         }
                     });
+
             // Make the connection attempt.
             ChannelFuture f = bootstrap.connect(TestClient.IP, TestClient.PORT);
+            //ChannelFuture可以添加多个监听器，监听器的operationComplete()方法可以实现回调的功能
             f.addListener(new ConnectionListener());
             f.channel().closeFuture().sync();
 

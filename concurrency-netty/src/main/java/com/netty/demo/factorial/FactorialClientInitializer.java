@@ -13,30 +13,23 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.netty.telnet;
+package com.netty.demo.factorial;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
-import io.netty.handler.codec.DelimiterBasedFrameDecoder;
-import io.netty.handler.codec.Delimiters;
-import io.netty.handler.codec.string.StringDecoder;
-import io.netty.handler.codec.string.StringEncoder;
+import io.netty.handler.codec.compression.ZlibCodecFactory;
+import io.netty.handler.codec.compression.ZlibWrapper;
 import io.netty.handler.ssl.SslContext;
 
 /**
- * Creates a newly configured {@link ChannelPipeline} for a new channel.
+ * Creates a newly configured {@link ChannelPipeline} for a client-side channel.
  */
-public class TelnetClientInitializer extends ChannelInitializer<SocketChannel> {
-
-    private static final StringDecoder DECODER = new StringDecoder();
-    private static final StringEncoder ENCODER = new StringEncoder();
-
-    private static final TelnetClientHandler CLIENT_HANDLER = new TelnetClientHandler();
+public class FactorialClientInitializer extends ChannelInitializer<SocketChannel> {
 
     private final SslContext sslCtx;
 
-    public TelnetClientInitializer(SslContext sslCtx) {
+    public FactorialClientInitializer(SslContext sslCtx) {
         this.sslCtx = sslCtx;
     }
 
@@ -45,15 +38,18 @@ public class TelnetClientInitializer extends ChannelInitializer<SocketChannel> {
         ChannelPipeline pipeline = ch.pipeline();
 
         if (sslCtx != null) {
-            pipeline.addLast(sslCtx.newHandler(ch.alloc(), TelnetClient.HOST, TelnetClient.PORT));
+            pipeline.addLast(sslCtx.newHandler(ch.alloc(), FactorialClient.HOST, FactorialClient.PORT));
         }
 
-        // Add the text line codec combination first,
-        pipeline.addLast(new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()));
-        pipeline.addLast(DECODER);
-        pipeline.addLast(ENCODER);
+        // Enable stream compression (you can remove these two if unnecessary)
+        pipeline.addLast(ZlibCodecFactory.newZlibEncoder(ZlibWrapper.GZIP));
+        pipeline.addLast(ZlibCodecFactory.newZlibDecoder(ZlibWrapper.GZIP));
+
+        // Add the number codec first,
+        pipeline.addLast(new BigIntegerDecoder());
+        pipeline.addLast(new NumberEncoder());
 
         // and then business logic.
-        pipeline.addLast(CLIENT_HANDLER);
+        pipeline.addLast(new FactorialClientHandler());
     }
 }

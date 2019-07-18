@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.netty.telnet;
+package com.netty.demo.telnet;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

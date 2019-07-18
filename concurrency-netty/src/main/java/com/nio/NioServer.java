@@ -22,7 +22,7 @@ import java.util.Set;
  * @date 2019/7/15 0015 21:49
  */
 public class NioServer implements Runnable {
-    private static Logger LOGGER = LoggerFactory.getLogger(CreateUnvProtocol.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(NioServer.class);
     @Override
     public void run() {
         try {

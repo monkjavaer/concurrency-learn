@@ -15,7 +15,7 @@ import java.nio.channels.SocketChannel;
  * @date 2019/7/18 13:05
  */
 public class NioClient {
-    private static Logger LOGGER = LoggerFactory.getLogger(CreateUnvProtocol.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(NioClient.class);
     private static int PORT = 9011;
     private static String[] messages = {"这是服务器"};
 
