@@ -2,6 +2,7 @@ package com.netty.second;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
@@ -26,9 +27,9 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         LOGGER.info("server {} connected.", ctx.channel().remoteAddress());
-        ctx.writeAndFlush(Unpooled.copiedBuffer("hello server!", CharsetUtil.UTF_8));
+//        ctx.writeAndFlush(Unpooled.copiedBuffer("hello server!", CharsetUtil.UTF_8));
         ByteBuf byteBuf = null;
-        byte[] message = "client test".getBytes();
+        byte[] message = "client test\n".getBytes();
         for(int i = 0;i<100;i++){
             byteBuf = Unpooled.buffer(message.length);
             byteBuf.writeBytes(message);
@@ -36,21 +37,16 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
         }
     }
 
+    private int count = 0;
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        ByteBuf byteBuf = (ByteBuf) msg;
-        //获取缓冲区可读字节数
-        int readableBytes = byteBuf.readableBytes();
-        byte[] bytes = new byte[readableBytes];
-        byteBuf.readBytes(bytes);
-        LOGGER.info("readableBytes is{},client received message:{}", readableBytes, new String(bytes, StandardCharsets.UTF_8));
+        String message = (String) msg;
+        LOGGER.info("client received message {}：{}", ++count, message);
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         ctx.flush();
-//        ctx.writeAndFlush(Unpooled.EMPTY_BUFFER)
-//                .addListener(ChannelFutureListener.CLOSE);
     }
 
     @Override

@@ -32,24 +32,19 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         LOGGER.info("client {} connected.", ctx.channel().remoteAddress());
-        ctx.writeAndFlush(Unpooled.copiedBuffer("hello client!", CharsetUtil.UTF_8));
     }
 
+    private int count = 0;
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        ByteBuf byteBuf = (ByteBuf) msg;
-        //获取缓冲区可读字节数
-        int readableBytes = byteBuf.readableBytes();
-        byte[] bytes = new byte[readableBytes];
-        byteBuf.readBytes(bytes);
-        LOGGER.info("readableBytes is{},server received message：{}", readableBytes, new String(bytes, StandardCharsets.UTF_8));
+        String message = (String) msg;
+        LOGGER.info("server received message {}：{}", ++count, message);
+        ctx.writeAndFlush(Unpooled.copiedBuffer("hello client!\n", CharsetUtil.UTF_8));
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         ctx.flush();
-//        ctx.writeAndFlush(Unpooled.EMPTY_BUFFER)
-//                .addListener(ChannelFutureListener.CLOSE);
     }
 
     @Override
