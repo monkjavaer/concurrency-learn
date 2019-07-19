@@ -1,0 +1,19 @@
+syntax = "proto3";
+package com.netty.protobuf;
+option java_outer_classname = "UserInfoProto";
+
+//用户信息
+message UserInfo{
+    //姓名
+    string name = 1;
+    //住址
+    repeated Address address= 2;
+    //年龄
+    uint32 age = 3;
+}
+
+//用户常用住址
+message Address{
+    string addressname = 1;
+    uint32 adressno = 2;
+}
