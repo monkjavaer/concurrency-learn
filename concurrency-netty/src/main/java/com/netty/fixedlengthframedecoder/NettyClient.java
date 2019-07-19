@@ -1,16 +1,17 @@
-package com.netty.second;
+package com.netty.fixedlengthframedecoder;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.codec.LineBasedFrameDecoder;
+import io.netty.handler.codec.FixedLengthFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * FixedLengthFrameDecoder 固定长度解码器
  * @author monkjavaer
  * @date 2019/7/18 17:17
  */
@@ -30,7 +31,7 @@ public class NettyClient {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ChannelPipeline pipeline = ch.pipeline();
-                            pipeline.addLast(new LineBasedFrameDecoder(1024));
+                            pipeline.addLast(new FixedLengthFrameDecoder(24));
                             pipeline.addLast(new StringDecoder());
                             pipeline.addLast(new NettyClientHandler());
                         }

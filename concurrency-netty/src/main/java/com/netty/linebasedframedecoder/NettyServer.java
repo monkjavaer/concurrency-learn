@@ -1,4 +1,4 @@
-package com.netty.second;
+package com.netty.linebasedframedecoder;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * LineBasedFrameDecoder遍历ByteBuf中的可读字节，按行（\n \r\n）处理,作为码流结束标志，解码
  * @author monkjavaer
  * @date 2019/7/18 14:56
  */
