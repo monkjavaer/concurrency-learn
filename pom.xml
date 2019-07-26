@@ -30,7 +30,7 @@
         <logback-classic.version>1.2.1</logback-classic.version>
         <logback-ext-spring.version>0.1.4</logback-ext-spring.version>
         <!-- commons -->
-        <commons-lang3.version>3.7</commons-lang3.version>
+        <commons-lang3.version>3.9</commons-lang3.version>
     </properties>
 
     <dependencyManagement>
@@ -85,6 +85,9 @@
                 <artifactId>logback-classic</artifactId>
                 <version>${logback-classic.version}</version>
             </dependency>
+            <!-- logback end-->
+
+            <!-- apache.commons  -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>

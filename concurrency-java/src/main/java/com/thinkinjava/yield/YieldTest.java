@@ -1,14 +1,15 @@
-package com.thinkinjava;
+package com.thinkinjava.yield;
 
 /**
  * @author monkjavaer
  * @version V1.0
  * @date 2019/7/25 0025 23:04
  */
-public class Test {
+public class YieldTest {
     public static void main(String[] args) {
-        for(int i =0 ; i< 10;i++){
-            new Thread(new CountDown()).start();
+        int time = 10;
+        for (int i = 0; i < time; i++) {
+            new Thread(new YieldTask()).start();
         }
         System.out.println("end....");
     }
