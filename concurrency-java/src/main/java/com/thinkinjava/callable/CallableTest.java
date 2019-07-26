@@ -1,9 +1,10 @@
 package com.thinkinjava.callable;
 
-import com.thinkinjava.yield.YieldTask;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -21,14 +22,19 @@ public class CallableTest {
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newCachedThreadPool();
         try {
+            List<Future<String>> list = new ArrayList<>();
             int time = 10;
             for (int i = 0; i < time; i++) {
                 Future<String> future = executorService.submit(new CallableTask(i));
+                list.add(future);
+            }
+            for (Future<String> future : list) {
                 LOGGER.info(future.get());
             }
+
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             executorService.shutdown();
         }
 

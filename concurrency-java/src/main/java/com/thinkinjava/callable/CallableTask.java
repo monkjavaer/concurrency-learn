@@ -1,5 +1,8 @@
 package com.thinkinjava.callable;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.concurrent.Callable;
 
 /**
@@ -13,7 +16,7 @@ import java.util.concurrent.Callable;
  * @date 2019/7/26 0026 23:08
  */
 public class CallableTask implements Callable<String> {
-
+    private static Logger LOGGER = LoggerFactory.getLogger(CallableTask.class);
     private int id;
 
     public CallableTask(int id) {
@@ -22,6 +25,9 @@ public class CallableTask implements Callable<String> {
 
     @Override
     public String call() throws Exception {
+        LOGGER.info("TaskResult's call() ");
+        Thread.sleep(10000);
+        LOGGER.info("TaskResult sleep end ...");
         return "TaskResult's id is " + id;
     }
 }
