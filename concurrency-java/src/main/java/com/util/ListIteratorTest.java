@@ -1,4 +1,4 @@
-package com.util.list;
+package com.util;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ import java.util.*;
  * @author monkjavaer
  * @date 2019/01/10 21:53
  */
-public class ListUtil {
+public class ListIteratorTest {
 
     public static void main(String[] args) {
         List<Integer> arrayList = new ArrayList<>();
