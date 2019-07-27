@@ -3,12 +3,7 @@ package com.thinkinjava.callable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 /**
  * @author monkjavaer
@@ -22,15 +17,17 @@ public class CallableTest {
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newCachedThreadPool();
         try {
-            List<Future<String>> list = new ArrayList<>();
-            int time = 10;
-            for (int i = 0; i < time; i++) {
-                Future<String> future = executorService.submit(new CallableTask(i));
-                list.add(future);
+            //executorService.submit(Callable<T> task) 返回Future对象
+            Future<String> future = executorService.submit(new CallableTask());
+            //future.isDone()查询Future完成没有
+            LOGGER.info("main 线程开始做一些工作,将会花费4秒....");
+            TimeUnit.SECONDS.sleep(4);
+            LOGGER.info("main 线程已完成！");
+            if (future.isDone()) {
+                //future.get()获取结果
+                LOGGER.info("CallableTask 任务线程返回结果 = {}.",future.get());
             }
-            for (Future<String> future : list) {
-                LOGGER.info(future.get());
-            }
+
 
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();

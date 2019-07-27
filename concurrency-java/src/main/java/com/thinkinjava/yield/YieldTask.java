@@ -16,7 +16,7 @@ public class YieldTask implements Runnable {
     public void run() {
         while (total-- > 0) {
             LOGGER.info(Thread.currentThread().getName() + "   :" + total);
-            // yield()让步。它能让当前线程由“运行状态”进入到“就绪状态”
+            // yield()让步。它能让当前线程由“运行状态”进入到“就绪状态”,Thread.yield()很少使用,我们不能依赖Thread.yield()来控制我们的流程。
             Thread.yield();
         }
     }
