@@ -1,4 +1,4 @@
-package com.thread.synchronizedmodel.syn1;
+package com.thinkinjava.synchronizedmodel.syn1;
 
 /**
  * Syn1ThreadA线程先持有Service1对象的锁，Syn1ThreadB对象调用synchronized方法需要等待

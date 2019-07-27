@@ -1,4 +1,4 @@
-package com.thread.synchronizedmodel;
+package com.thinkinjava.synchronizedmodel;
 
 import java.util.concurrent.TimeUnit;
 

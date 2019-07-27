@@ -1,4 +1,4 @@
-package com.thread.synchronizedmodel.syn1;
+package com.thinkinjava.synchronizedmodel.syn1;
 
 /**
  * @author monkjavaer

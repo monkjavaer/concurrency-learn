@@ -1,4 +1,4 @@
-package com.thread.synchronizedmodel.syn4;
+package com.thinkinjava.synchronizedmodel.syn4;
 
 /**
  * 锁不同的对象，异步的

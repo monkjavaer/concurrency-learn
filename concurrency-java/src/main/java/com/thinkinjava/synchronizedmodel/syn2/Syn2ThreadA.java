@@ -1,4 +1,4 @@
-package com.thread.synchronizedmodel.syn2;
+package com.thinkinjava.synchronizedmodel.syn2;
 
 /**
  * @author monkjavaer
@@ -8,6 +8,8 @@ public class Syn2ThreadA extends Thread{
     private Service2 service;
     public Syn2ThreadA(Service2 service) {
         this.service = service;
+        setName("thread-A");
+        start();
     }
 
     @Override

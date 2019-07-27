@@ -1,4 +1,4 @@
-package com.thread.synchronizedmodel.syn4;
+package com.thinkinjava.synchronizedmodel.syn4;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,10 +8,9 @@ import java.util.concurrent.TimeUnit;
  */
 public class Service4 {
 
+    private static final String name =new String();
 
     public void printName(){
-
-        String name =new String();
 
         synchronized (name){
             System.out.println(Thread.currentThread().getName()+":start");

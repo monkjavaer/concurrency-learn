@@ -1,4 +1,4 @@
-package com.thread.synchronizedmodel.syn5;
+package com.thinkinjava.synchronizedmodel.syn5;
 
 /**
  * 锁不同的对象，异步的
