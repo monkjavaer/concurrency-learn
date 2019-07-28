@@ -12,8 +12,8 @@ import io.netty.channel.socket.nio.NioSocketChannel;
  */
 public class TestClient {
 
-    public final static int PORT = 5196;
-    public final static String IP = "10.11.14.31";
+    public final static int PORT = 5197;
+    public final static String IP = "127.0.0.1";
 
     public static void connect(){
         EventLoopGroup group = new NioEventLoopGroup();

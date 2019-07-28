@@ -62,7 +62,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         unvProtocol.setiCmdType(211);
         unvProtocol.setiVersion(2);
         unvProtocol.setStrXml(CreateUnvXml.buildBodyXml());
-        ArrayList<byte[]> list = getImageFromURL("http://192.168.19.254:8888/group1/M00/00/00/wKgT_ly1irKAalgAAB0dWRQIHso793.jpg");
+        ArrayList<byte[]> list = getImageFromURL("https://img2018.cnblogs.com/blog/708315/201901/708315-20190104224050470-618355250.png");
         unvProtocol.setiImageNum(1);
         unvProtocol.setoArrayList(list);
         ctx.writeAndFlush(unvProtocol);
